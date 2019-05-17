@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   buttonEvent() {
-    this.state.clickCnt ++;
+    this.state.clickCnt++;
     this.setState({
       title: "Custom Header" + this.state.clickCnt
     });
@@ -25,13 +25,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Welcome
-          </p>
-          <button onClick={this.buttonEvent}>Title</button>
-          <Header title={this.state.title}/>
-        </header>
+        <Header title={this.state.title} />
+
       </div>
     );
   }

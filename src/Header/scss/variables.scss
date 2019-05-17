@@ -1,0 +1,29 @@
+$primary-font: "Roboto", sans-serif;
+$menu-font: "Raleway", sans-serif;
+
+$bg-color--light: #f5f5f5;
+$bg-color--dark: #1c1c1c;
+$black-color: #000;
+$primary-color: #7c4dff;
+$white-color: #fff;
+
+$font-color--main: #232323;
+$font-color--desc: #666;
+
+$medium-screen--width: 1014px;
+
+@mixin nav-fmt($_font-size) {
+  color: $font-color--main;
+  cursor: pointer;
+  font: $_font-size $menu-font;
+  font-weight: 600;
+  margin: auto 0;
+}
+
+@mixin heading-fmt($_font-size, $_line-height) {
+  color: $font-color--main;
+  font-size: $_font-size;
+  font-weight: 700;
+  line-height: $_line-height;
+  text-transform: uppercase;
+}
