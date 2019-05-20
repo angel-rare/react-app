@@ -1,33 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
-import Header from './Header/Header'
+import Header from './Header/Header';
+import Home from './Home/Home';
+import About from './About/About';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      clickCnt: 0,
-      title: "Custom Header"
-    }
-
-    this.buttonEvent = this.buttonEvent.bind(this);
-  }
-
-  buttonEvent() {
-    this.state.clickCnt++;
-    this.setState({
-      title: "Custom Header" + this.state.clickCnt
-    });
-  }
-
   render() {
     return (
-      <div className="App">
-        <Header title={this.state.title} />
+      <Router>
+        <div>
+          <Header />
 
-      </div>
+
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

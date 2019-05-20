@@ -1,33 +1,31 @@
 import React from 'react';
-import { changeExt } from 'upath';
+import { Link } from 'react-router-dom';
+
 import './Header.scss';
 
 export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <header>
         <nav>
-          <div class="logo">Sility</div>
-          <div class="menu">
-            <ul class="menu__bar">
-              <li class="menu__item">Home</li>
-              <li class="menu__item">About</li>
-              <li class="menu__item">Skill</li>
-              <li class="menu__item">Experience</li>
-              <li class="menu__item">Education</li>
-              <li class="menu__item">Work</li>
-              <li class="menu__item">Blog</li>
-              <li class="menu__item">Contact</li>
+          <div className="logo">Sility</div>
+          <div className="menu">
+            <ul className="menu__bar">
+              <Link to={'/'}><li className="menu__item">Home</li></Link>
+              <Link to={'/about'}><li className="menu__item">About</li></Link>
+              <Link to={'/'}><li className="menu__item">Skill</li></Link>
+              <Link to={'/'}><li className="menu__item">Experience</li></Link>
+              <Link to={'/'}><li className="menu__item">Education</li></Link>
+              <Link to={'/'}><li className="menu__item">Work</li></Link>
+              <Link to={'/'}><li className="menu__item">Blog</li></Link>
+              <Link to={'/'}><li className="menu__item">Contact</li></Link>
             </ul>
-            <a class="menu__btn">
+            <a className="menu__btn" href="#">
               Menu
-              <i class="fa fa-bars" aria-hidden="true"></i>
+              <i className="fa fa-bars" aria-hidden="true"></i>
             </a>
-            <a class="menu__action">+</a>
+            <a className="menu__action" href="#">+</a>
           </div>
         </nav>
       </header>
