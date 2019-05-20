@@ -1,0 +1,42 @@
+@import './../Common/scss/common.scss';
+
+footer {
+  .footer__top {
+      background-color: $font-color--main;
+      padding: 4.8rem 0;
+
+      ul {
+          list-style: none;
+          @media only screen and (min-width: $medium-screen--width) {
+              display: flex;
+              justify-content: space-around;
+          }
+      }
+
+      li {
+          text-align: center;
+          color: $white-color;
+          h4 {
+              font-size: 1.6em;
+              line-height: 2.4rem;
+              margin-top: 0;
+              margin-bottom: 2.4rem;
+          }
+          p {
+              margin-bottom: 2.4rem;
+              margin: 0 0 1rem;
+              box-sizing: border-box;
+              font-size: 1.4em;
+              line-height: 2.4rem;
+          }
+      }
+  }
+
+  .footer__bottom {
+      background-color: $bg-color--dark;
+      line-height: 5rem;
+      color: $white-color;
+      text-align: center;
+      font-size: 1.4rem;
+  }
+}

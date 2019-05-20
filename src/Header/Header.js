@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Header.scss';
 
@@ -12,14 +12,30 @@ export default class Header extends React.Component {
           <div className="logo">Sility</div>
           <div className="menu">
             <ul className="menu__bar">
-              <Link to={'/'}><li className="menu__item">Home</li></Link>
-              <Link to={'/about'}><li className="menu__item">About</li></Link>
-              <Link to={'/'}><li className="menu__item">Skill</li></Link>
-              <Link to={'/'}><li className="menu__item">Experience</li></Link>
-              <Link to={'/'}><li className="menu__item">Education</li></Link>
-              <Link to={'/'}><li className="menu__item">Work</li></Link>
-              <Link to={'/'}><li className="menu__item">Blog</li></Link>
-              <Link to={'/'}><li className="menu__item">Contact</li></Link>
+              <NavLink exact to="/">
+                <li className="menu__item">Home</li>
+              </NavLink>
+              <NavLink to="/about">
+                <li className="menu__item">About</li>
+              </NavLink>
+              <NavLink to="/404">
+                <li className="menu__item">Skill</li>
+              </NavLink>
+              <NavLink to="/404">
+                <li className="menu__item">Experience</li>
+              </NavLink>
+              <NavLink to="/404">
+                <li className="menu__item">Education</li>
+              </NavLink>
+              <NavLink to="/404">
+                <li className="menu__item">Work</li>
+              </NavLink>
+              <NavLink to="/404">
+                <li className="menu__item">Blog</li>
+              </NavLink>
+              <NavLink to="/404">
+                <li className="menu__item">Contact</li>
+              </NavLink>
             </ul>
             <a className="menu__btn" href="#">
               Menu

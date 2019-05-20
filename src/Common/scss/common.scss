@@ -1,4 +1,24 @@
+@import './variables.scss';
+
+html,
+body {
+    background-color: $bg-color--light;
+    font: 10px $primary-font;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .row {
   padding-bottom: 5rem;
   margin: auto 0;
+}
+
+.m-auto {
+  margin: auto;
 }
