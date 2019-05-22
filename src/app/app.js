@@ -6,26 +6,24 @@ import Header from './containers/header';
 import Footer from './containers/footer';
 
 class App extends React.Component {
-  
+
   constructor (props) {
     super(props);
   }
 
-  onChangeTitle= () => {
+  onChangeTitle = () => {
     this.setState({
       isChanged: !this.state.isChanged
     });
   };
 
-  render () {  
+  render () {
     return (
-      <div>
-        <Router>
-          <Header />
-          <Routes />
-          <Footer />
-        </Router>
-      </div>
+      <Router>
+        <Header />
+        <Routes />
+        <Footer />
+      </Router>
     );
   }
 }
