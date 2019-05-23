@@ -1,9 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
-
+import { connect } from 'react-redux';
 import '../../styles/components/about.scss';
 
-export default class AboutComponent extends React.Component {
+const mapStateToProps = state => state;
+
+export class AboutComponent extends React.Component {
   render () {
     return (
       <div className="section-aboutme">
@@ -13,7 +15,7 @@ export default class AboutComponent extends React.Component {
             <img src="/assets/image/man2.png" className="section-aboutme__image" alt="man" />
           </div>
           <div className="col-md-9 info-section">
-            <h4 className="info-section__name">Benjamin Thomson</h4>
+            <h4 className="info-section__name">Start {this.props.name}End Thomson</h4>
             <h5>Web &amp; UX Designer</h5>
             <p>Ultricies nisi voluptatem, illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque latu dantium, totam rem aperiam, eaque ipsa quae ab illo tempor dignissim at. </p>
             <div className="signature"><img src="/assets/image/signature.png" alt="signature" className="img-responsive" /></div>
@@ -44,10 +46,12 @@ export default class AboutComponent extends React.Component {
                   <h5>Marketing</h5>
                 </div>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
     );
   }
 }
+
+export default connect(mapStateToProps)(AboutComponent);
